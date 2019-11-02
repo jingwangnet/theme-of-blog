@@ -14,6 +14,11 @@ html {
     text-rendering: optimizelegibility;
 }
 
+body {
+    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
+}
 
 @include comment(Common tag);
 ul {
@@ -32,6 +37,17 @@ h2 {
     border-bottom: 2px solid  black;
 }
 
+a {
+    color: #333;
+}
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    cursor: pointer;
+
+    @include decorateFont($size: 1.2rem, $weight: 700);
+}
+
 @include comment(Layout);
 
 body {
@@ -40,8 +56,7 @@ body {
     
     header {
         #logo {
-            display: flex;;
-            flex-flow: row wrap;
+            @include displayFlex;
 
 
             #icon-menu {
@@ -80,15 +95,54 @@ body {
 
 }
 
+@include minw(900){
+    body {
+        > header {
+            @include displayFlex();
+
+            #logo {
+                display: block;
+                #icon-menu {
+                    display: none;
+                }
+            }
+    
+            #nav-wrapper {
+                flex: auto;
+
+                @include displayFlex();
+
+
+                nav {
+                    display: block;
+                    flex: auto;
+
+                    ul {
+                        @include displayFlex($justify: flex-end);
+                    }
+
+                }
+                form {
+                    display: block;
+                }
+    
+            }
+        }
+    }
+
+    main {
+        @include displayFlex($wrap: nowrap);
+        align-items: normal;
+    }
+}
+
 @include comment(Typography);
 
 body {
     padding: 1rem;
     
-    header {
+    > header {
         #logo {
-
-
             #icon-menu {
                 a {
                     display: block;
@@ -105,5 +159,37 @@ body {
     footer {
         text-align: center;
         padding: 1rem;
+    }
+}
+
+@include minw(900){
+
+    body {
+        padding: 0 #{calc(50% - 600px)};
+        
+        > header {
+            padding: 2rem 1rem;
+
+            #nav-wrapper {
+                form {
+
+                    @include decorateFont($size: 1.2rem, $weight: 700);
+                    label {
+                        text-transform: capitalize;
+                        display: inline-block;
+                        padding: 1rem;
+                    }
+
+                    input {
+                        max-width: 15rem;
+                        border: none;
+                        font-size: 1.2rem;
+                        border-bottom: 3px solid #333 ;
+                        padding: 1rem 
+                    }
+
+                }
+            }
+        }
     }
 }

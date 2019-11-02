@@ -4,7 +4,7 @@
 
 article {
     padding: 1rem 0;
-   .article-sections {
+    .article-sections {
        section {
            margin-bottom: 1rem;
 
@@ -16,6 +16,7 @@ article {
    }
 }
 
+
 aside {
    section {
        box-shadow: 0 0 3px 3px rgba(black, .5);
@@ -23,9 +24,59 @@ aside {
        figure {
            text-align: center;
            img {
-               width: 30%;
-               margin: 0 auto;
+               max-width: 100px;
            }
        }
    }
 }
+
+
+@include minw(500) {
+    aside {
+        section {
+            @include displayFlex($wrap: nowrap);
+            
+            figure {
+                img {
+                    margin: 1rem;
+                }
+            }
+            ul {
+                flex: 1 1 auto;
+                margin-left: 2rem;
+            }
+
+        }
+    }
+}
+@include minw(900) { 
+    article {
+        padding: 1rem;
+        .article-sections {
+           @include displayFlex();
+
+           section {
+               margin: 0;
+               flex: auto;
+               margin: 1rem;
+               &:last-of-type {
+                  margin-bottom: 1rem;
+               }
+           }
+       }
+    }
+
+    aside {
+        padding: 1rem;
+
+        section {
+            display: block;
+            ul {
+                margin-left: 0;
+            }
+            min-width: 300px;
+
+        }
+    }
+}
+@include comment(index-end);

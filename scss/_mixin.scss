@@ -10,3 +10,19 @@
         @content;
     }
 }
+
+@mixin displayFlex($direction: row, $wrap: wrap, $justify: flex-start,){
+    display: flex;
+    flex-flow: $direction $wrap;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin decorateFont($size: 1rem, $weight: 400, $color: #333, $deco: none) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    text-decoration: $deco;
+
+}
+    

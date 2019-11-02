@@ -31,9 +31,9 @@
                 </ul>
             </nav>
 
-            <form action="/search/" method="post">
+            <form action="/search/" method="post" id="search">
                 <label for="nav-search">search</label>
-                <input type="search" name="search" id="nav-search">
+                <input type="search" name="search" id="nav-search" placeholder="search anything">
             </form>
 
         </div>
@@ -113,6 +113,26 @@
            &copy; JINGWANGnet 2013-2019
         </p>
     </footer>
+    <script>
+        window.onload = initAll;
+
+        function initAll() {
+            btnSwith('#nav-search-btn', '#search')
+
+        }
+
+        function btnSwith(btn, obj) {
+            let b = document.querySelector(btn);
+            let o = document.querySelector(obj);
+
+            b.addEventListener('click', () => {
+                b.classList.toggle("active");
+                o.classList.toggle("active");
+            });
+        }
+
+    </script>
+
 </body>
 
 </html>
