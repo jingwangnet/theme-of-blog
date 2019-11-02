@@ -1,0 +1,107 @@
+/*    Ready 
+--------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  color: #333;
+  text-rendering: optimizelegibility;
+}
+
+/*    Common tag 
+--------------------------------------------------*/
+ul {
+  list-style: none;
+}
+
+i.fab, i.fas {
+  display: inline-block;
+  width: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  margin: 1.5rem 0 1rem;
+  border-bottom: 2px solid black;
+}
+
+/*    Layout 
+--------------------------------------------------*/
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+body header #logo {
+  display: flex;
+  flex-flow: row wrap;
+}
+body header #logo #icon-menu {
+  flex: auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+body header #nav-wrapper nav {
+  display: none;
+}
+body header #nav-wrapper nav.active {
+  display: block;
+}
+body header #nav-wrapper form {
+  display: none;
+}
+body header #nav-wrapper form.active {
+  display: block;
+}
+body main {
+  flex: auto;
+}
+
+/*    Typography 
+--------------------------------------------------*/
+body {
+  padding: 1rem;
+}
+body header #logo #icon-menu a {
+  display: block;
+  padding: 1rem;
+  cursor: pointer;
+}
+body main {
+  flex: auto;
+}
+body footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+/*    index 
+--------------------------------------------------*/
+article {
+  padding: 1rem 0;
+}
+article .article-sections section {
+  margin-bottom: 1rem;
+}
+article .article-sections section:last-of-type {
+  margin-bottom: 0;
+}
+
+aside section {
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+aside section figure {
+  text-align: center;
+}
+aside section figure img {
+  width: 30%;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=index.css.map */

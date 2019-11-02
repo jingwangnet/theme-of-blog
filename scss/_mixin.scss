@@ -1,0 +1,12 @@
+@mixin comment ($name){
+
+    /*    #{$name} 
+    --------------------------------------------------*/
+}
+
+
+@mixin minw ($media) {
+    @media (min-width: $media/16+em) {
+        @content;
+    }
+}

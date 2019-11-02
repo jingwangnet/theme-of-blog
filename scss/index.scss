@@ -1,0 +1,31 @@
+@import "basic";
+
+@include comment(index);
+
+article {
+    padding: 1rem 0;
+   .article-sections {
+       section {
+           margin-bottom: 1rem;
+
+           &:last-of-type {
+
+              margin-bottom: 0;
+           }
+       }
+   }
+}
+
+aside {
+   section {
+       box-shadow: 0 0 3px 3px rgba(black, .5);
+       padding: 1rem;
+       figure {
+           text-align: center;
+           img {
+               width: 30%;
+               margin: 0 auto;
+           }
+       }
+   }
+}
