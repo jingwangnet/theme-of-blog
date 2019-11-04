@@ -33,6 +33,7 @@ i.fab, i.fas {
 h2 {
   margin: 1.5rem 0 1rem;
   border-bottom: 2px solid black;
+  font-size: 1.618rem;
 }
 
 a {
@@ -55,29 +56,32 @@ body {
   display: flex;
   flex-flow: column nowrap;
 }
-body header #logo {
+body > header #logo {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: flex-start;
 }
-body header #logo #icon-menu {
+body > header #logo h1 {
+  font-size: 2.618rem;
+}
+body > header #logo #icon-menu {
   flex: auto;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: flex-end;
 }
-body header #nav-wrapper nav {
+body > header #nav-wrapper nav {
   display: none;
 }
-body header #nav-wrapper nav.active {
+body > header #nav-wrapper nav.active {
   display: block;
 }
-body header #nav-wrapper form {
+body > header #nav-wrapper form {
   display: none;
 }
-body header #nav-wrapper form.active {
+body > header #nav-wrapper form.active {
   display: block;
 }
 body main {
@@ -136,6 +140,9 @@ body > header #logo #icon-menu a {
   padding: 1rem;
   cursor: pointer;
 }
+body > header #nav-wrapper #nav-menu ul li a {
+  font-size: 1.618rem;
+}
 body main {
   flex: auto;
 }
@@ -165,15 +172,24 @@ body footer {
   body > header #nav-wrapper form input {
     max-width: 15rem;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.618rem;
     border-bottom: 3px solid #333;
     padding: 1rem;
   }
 }
 /*    index 
 --------------------------------------------------*/
+/*    Layout 
+--------------------------------------------------*/
 article {
   padding: 1rem 0;
+}
+article header h1 {
+  font-size: 2.618rem;
+}
+article header p {
+  font-size: 1.618rem;
+  line-height: 1.3;
 }
 article .article-sections section {
   margin-bottom: 1rem;
@@ -191,6 +207,14 @@ aside section figure {
 }
 aside section figure img {
   max-width: 100px;
+}
+aside section ul li span {
+  display: inline-block;
+  width: 4rem;
+  text-align: center;
+}
+aside section ul li span::after {
+  content: attr(title);
 }
 
 @media (min-width: 31.25em) {
@@ -210,6 +234,7 @@ aside section figure img {
 }
 @media (min-width: 56.25em) {
   article {
+    flex: auto;
     padding: 1rem;
   }
   article .article-sections {
@@ -232,7 +257,7 @@ aside section figure img {
   }
   aside section {
     display: block;
-    min-width: 300px;
+    min-width: 330px;
   }
   aside section ul {
     margin-left: 0;

@@ -35,11 +35,13 @@ i.fab, i.fas {
 h2 {
     margin: 1.5rem 0 1rem;
     border-bottom: 2px solid  black;
+    @include fontSize(1);
 }
 
 a {
     color: #333;
 }
+
 nav ul li a {
     display: block;
     padding: 1rem;
@@ -54,10 +56,13 @@ body {
     display: flex;
     flex-flow: column nowrap ;
     
-    header {
+    > header {
         #logo {
             @include displayFlex;
 
+            h1 {
+                @include fontSize(2);
+            }
 
             #icon-menu {
                 flex: auto;
@@ -151,6 +156,19 @@ body {
                 }
             }
         }
+
+        #nav-wrapper {
+            #nav-menu {
+                ul {
+                    li {
+                        a {
+                            @include fontSize(1);
+                        }
+                    }
+                }
+
+            }
+        }
     }
     main {
         flex: auto;
@@ -183,7 +201,7 @@ body {
                     input {
                         max-width: 15rem;
                         border: none;
-                        font-size: 1.2rem;
+                        @include fontSize(1);
                         border-bottom: 3px solid #333 ;
                         padding: 1rem 
                     }

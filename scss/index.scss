@@ -2,8 +2,19 @@
 
 @include comment(index);
 
+@include comment(Layout);
 article {
     padding: 1rem 0;
+    header {
+        h1{
+            @include fontSize(2);
+        }
+
+        p {
+            @include fontSize(1);
+            line-height: 1.3;
+        }
+    }
     .article-sections {
        section {
            margin-bottom: 1rem;
@@ -25,6 +36,19 @@ aside {
            text-align: center;
            img {
                max-width: 100px;
+           }
+       }
+
+       ul {
+           li {
+               span {
+                    display: inline-block;
+                    width: 4rem;
+                    text-align: center;
+                    &::after {
+                       content: attr(title);
+                    }
+               }
            }
        }
    }
@@ -51,7 +75,9 @@ aside {
 }
 @include minw(900) { 
     article {
+        flex: auto;
         padding: 1rem;
+
         .article-sections {
            @include displayFlex();
 
@@ -74,7 +100,7 @@ aside {
             ul {
                 margin-left: 0;
             }
-            min-width: 300px;
+            min-width: 330px;
 
         }
     }
