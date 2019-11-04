@@ -33,7 +33,7 @@ i.fab, i.fas {
 } 
 
 h2 {
-    margin: 1.5rem 0 1rem;
+    // margin: 1.5rem 0 1rem;
     border-bottom: 2px solid  black;
     @include fontSize(1);
 }
@@ -46,7 +46,6 @@ nav ul li a {
     display: block;
     padding: 1rem;
     cursor: pointer;
-
     @include decorateFont($size: 1.2rem, $weight: 700);
 }
 
@@ -206,6 +205,17 @@ body {
                         padding: 1rem 
                     }
 
+                }
+
+                #nav-menu {
+                    ul {
+                        li {
+                            a {
+                               padding: 0;
+                               padding-right: 1rem;
+                            }
+                        }
+                    }
                 }
             }
         }

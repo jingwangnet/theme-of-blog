@@ -31,7 +31,6 @@ i.fab, i.fas {
 }
 
 h2 {
-  margin: 1.5rem 0 1rem;
   border-bottom: 2px solid black;
   font-size: 1.618rem;
 }
@@ -175,6 +174,10 @@ body footer {
     font-size: 1.618rem;
     border-bottom: 3px solid #333;
     padding: 1rem;
+  }
+  body > header #nav-wrapper #nav-menu ul li a {
+    padding: 0;
+    padding-right: 1rem;
   }
 }
 

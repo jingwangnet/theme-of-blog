@@ -31,7 +31,6 @@ i.fab, i.fas {
 }
 
 h2 {
-  margin: 1.5rem 0 1rem;
   border-bottom: 2px solid black;
   font-size: 1.618rem;
 }
@@ -176,6 +175,10 @@ body footer {
     border-bottom: 3px solid #333;
     padding: 1rem;
   }
+  body > header #nav-wrapper #nav-menu ul li a {
+    padding: 0;
+    padding-right: 1rem;
+  }
 }
 /*    index 
 --------------------------------------------------*/
@@ -196,6 +199,7 @@ article {
 }
 article header h1 {
   font-size: 2.618rem;
+  line-height: 1.3;
 }
 article header p {
   font-size: 1.618rem;
@@ -246,7 +250,7 @@ aside section ul li span::after {
     margin: 1rem;
   }
   aside section ul {
-    margin-left: 2rem;
+    padding-left: 1rem;
   }
 }
 /*    layout 700 
@@ -278,6 +282,10 @@ aside section ul li span::after {
   article .article-sections section:last-of-type {
     margin-bottom: 1rem;
   }
+
+  aside section {
+    padding: 2rem 1rem;
+  }
 }
 /*    layout 900 
 --------------------------------------------------*/
@@ -297,8 +305,8 @@ aside section ul li span::after {
   aside {
     padding: 1rem;
   }
-  aside section ul {
-    margin-left: 0;
+  aside section {
+    padding: 1rem;
   }
 }
 
