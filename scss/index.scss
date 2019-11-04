@@ -3,6 +3,28 @@
 @include comment(index);
 
 @include comment(Layout);
+aside {
+   section {
+       figure {
+           img {
+               max-width: 100px;
+           }
+       }
+
+       ul {
+           li {
+               span {
+                    display: inline-block;
+                    width: 4rem;
+               }
+           }
+       }
+   }
+}
+
+
+@include comment(typography);
+
 article {
     padding: 1rem 0;
     header {
@@ -27,7 +49,6 @@ article {
    }
 }
 
-
 aside {
    section {
        box-shadow: 0 0 3px 3px rgba(black, .5);
@@ -42,7 +63,6 @@ aside {
        ul {
            li {
                span {
-                    display: inline-block;
                     width: 4rem;
                     text-align: center;
                     &::after {
@@ -54,36 +74,62 @@ aside {
    }
 }
 
-
+@include comment('layout 500');
 @include minw(500) {
     aside {
         section {
             @include displayFlex($wrap: nowrap);
             
+            ul {
+                flex: 1 1 auto;
+            }
+
+        }
+    }
+}
+
+@include comment('typography 500');
+@include minw(500) {
+    aside {
+        section {
             figure {
                 img {
                     margin: 1rem;
                 }
             }
+
             ul {
-                flex: 1 1 auto;
                 margin-left: 2rem;
             }
 
         }
     }
 }
-@include minw(900) { 
+
+@include comment('layout 700');
+@include minw(700) { 
     article {
         flex: auto;
-        padding: 1rem;
-
         .article-sections {
            @include displayFlex();
-
            section {
-               margin: 0;
                flex: auto;
+           }
+       }
+    }
+
+    aside {
+        section {
+            max-width: 500px;
+        }
+    }
+}
+
+@include comment('typography 700');
+@include minw(700) { 
+    article {
+        .article-sections {
+           section {
                margin: 1rem;
                &:last-of-type {
                   margin-bottom: 1rem;
@@ -91,18 +137,28 @@ aside {
            }
        }
     }
+}
 
+@include comment('layout 900');
+@include minw(900) { 
     aside {
-        padding: 1rem;
-
         section {
             display: block;
-            ul {
-                margin-left: 0;
-            }
             min-width: 330px;
-
         }
     }
 }
-@include comment(index-end);
+@include comment('typography 900');
+@include minw(900) { 
+    article {
+        padding: 1rem;
+    }
+    aside {
+        padding: 1rem;
+        section {
+            ul {
+                margin-left: 0;
+            }
+        }
+    }
+}

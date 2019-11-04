@@ -181,6 +181,16 @@ body footer {
 --------------------------------------------------*/
 /*    Layout 
 --------------------------------------------------*/
+aside section figure img {
+  max-width: 100px;
+}
+aside section ul li span {
+  display: inline-block;
+  width: 4rem;
+}
+
+/*    typography 
+--------------------------------------------------*/
 article {
   padding: 1rem 0;
 }
@@ -209,7 +219,6 @@ aside section figure img {
   max-width: 100px;
 }
 aside section ul li span {
-  display: inline-block;
   width: 4rem;
   text-align: center;
 }
@@ -217,6 +226,8 @@ aside section ul li span::after {
   content: attr(title);
 }
 
+/*    layout 500 
+--------------------------------------------------*/
 @media (min-width: 31.25em) {
   aside section {
     display: flex;
@@ -224,18 +235,25 @@ aside section ul li span::after {
     align-items: center;
     justify-content: flex-start;
   }
+  aside section ul {
+    flex: 1 1 auto;
+  }
+}
+/*    typography 500 
+--------------------------------------------------*/
+@media (min-width: 31.25em) {
   aside section figure img {
     margin: 1rem;
   }
   aside section ul {
-    flex: 1 1 auto;
     margin-left: 2rem;
   }
 }
-@media (min-width: 56.25em) {
+/*    layout 700 
+--------------------------------------------------*/
+@media (min-width: 43.75em) {
   article {
     flex: auto;
-    padding: 1rem;
   }
   article .article-sections {
     display: flex;
@@ -244,26 +262,44 @@ aside section ul li span::after {
     justify-content: flex-start;
   }
   article .article-sections section {
-    margin: 0;
     flex: auto;
+  }
+
+  aside section {
+    max-width: 500px;
+  }
+}
+/*    typography 700 
+--------------------------------------------------*/
+@media (min-width: 43.75em) {
+  article .article-sections section {
     margin: 1rem;
   }
   article .article-sections section:last-of-type {
     margin-bottom: 1rem;
   }
-
-  aside {
-    padding: 1rem;
-  }
+}
+/*    layout 900 
+--------------------------------------------------*/
+@media (min-width: 56.25em) {
   aside section {
     display: block;
     min-width: 330px;
+  }
+}
+/*    typography 900 
+--------------------------------------------------*/
+@media (min-width: 56.25em) {
+  article {
+    padding: 1rem;
+  }
+
+  aside {
+    padding: 1rem;
   }
   aside section ul {
     margin-left: 0;
   }
 }
-/*    index-end 
---------------------------------------------------*/
 
 /*# sourceMappingURL=index.css.map */
