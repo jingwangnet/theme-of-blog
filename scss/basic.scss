@@ -62,12 +62,7 @@ body {
                &.active {
                     display: block;
                }
-
-               input {
-                    flex: auto;
-                    // max-width: 70%;
-               }
-           }
+            }
         }
     }
     main { flex: auto;}
@@ -111,14 +106,10 @@ body {
             }
 
             form#nav-search {
-                padding: 1rem ;
-                label {
-                    @include decorateFont($weight:700);
-                }
-
+                padding: 1rem;
                 input {
-                    margin-left: 1rem;
-                    width: 60%;
+                    width: 100%;
+                    padding: 1rem;
                 }
 
             }
@@ -168,11 +159,6 @@ body {
     
                    &.active {
                         display: block;
-                   }
-    
-                   input {
-                        flex: auto;
-                        width: 70%;
                    }
                }
             }
