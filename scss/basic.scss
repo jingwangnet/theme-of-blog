@@ -28,7 +28,7 @@ body {
     >header {
         div#logo {
             display: flex;
-            @include displayFlex();
+            @include displayFlex($justify: flex-start);
 
             h1 {
                 a {
@@ -62,7 +62,6 @@ body {
 
                &.active {
                     display: block;
-                   @include displayFlex($wrap:nowrap);
                }
 
                input {

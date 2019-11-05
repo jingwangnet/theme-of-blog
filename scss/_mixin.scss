@@ -11,10 +11,10 @@
     }
 }
 
-@mixin displayFlex($direction: row, $wrap: wrap, $justify: flex-start,){
+@mixin displayFlex($direction: row, $wrap: wrap, $justify: center, $align-items: center){
     display: flex;
     flex-flow: $direction $wrap;
-    align-items: center;
+    align-items: $align-items;
     justify-content: $justify;
 }
 
