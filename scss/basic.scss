@@ -134,5 +134,26 @@ body {
 @include comment('Layout 700');
 @include comment('Typography 700');
 
-@include comment('Layout 900');
-@include comment('Typography 900');
+@include minw(900) {
+    @include comment('Layout 900');
+    body {
+        main {
+            @include displayFlex($align-items: norma, $wrap: nowrap);
+        }
+    }
+    @include comment('Typography 900');
+    body {
+        padding: 0 calc(50% - 480px);
+    }
+
+}
+
+@include minw(1200) {
+    @include comment('Layout 900');
+
+    @include comment('Typography 900');
+    body {
+        padding: 0 calc(50% - 600px);
+    }
+
+}

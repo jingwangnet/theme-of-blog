@@ -93,5 +93,47 @@ main {
 @include comment('layout 700');
 @include comment('typography 700');
 
-@include comment('layout 900');
-@include comment('typography 900');
+@include minw(900) {
+    @include comment('layout 900');
+    main {
+        // article {
+        //     div#sections-wrapper {
+        //         @include displayFlex();
+        //         section {
+        //             flex: auto;
+        //         }
+    
+        //     }
+        // }
+    
+        aside {
+            section#aside-info {
+                display: block;
+    
+            }
+        }
+    }
+    @include comment('typography 900');
+    main {
+        // article {
+        //     div#sections-wrapper {
+        //         @include displayFlex();
+        //         section {
+        //             flex: auto;
+        //         }
+    
+        //     }
+        // }
+    
+        aside {
+            section#aside-info {
+                display: block;
+                padding: 2rem 1rem;
+
+                min-width: 280px;
+    
+            }
+        }
+    }
+
+}
