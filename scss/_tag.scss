@@ -38,9 +38,50 @@ input[type=search] {
     }
 }
 
-@include comment("block");
+
 ul {
     list-style: none;
 }
 
 
+h1  {
+    @include fontSize(2);
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+p  {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    @include decorateFont($size: 1rem, $weight: 500, $line-height: 1.5 );
+}
+section {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        display: block;
+        content: " ";
+        z-index: -2;
+
+        width: 5rem;
+        height: 5rem;
+        background-color: rgba($second-color, .5);
+
+    }
+    &::after {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        display: block;
+        content: " ";
+        z-index: -1;
+
+        width: 5rem;
+        height: 5rem;
+        background-color: rgba($main-color, .5);
+
+    }
+}

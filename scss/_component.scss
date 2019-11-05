@@ -30,8 +30,6 @@
         color: $third-color;
     }
 
-    
-
 }
 
 
@@ -40,4 +38,32 @@ i.fas, i.fab {
     width: 1.5rem;
     text-align: center;
 
+}
+
+%border-bottom {
+    border-bottom: 2px solid $second-color;
+
+}
+
+
+.box-shadow {
+    box-shadow: 0 0 3px 3px $second-color;
+}
+
+section {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        display: block;
+        content: " ";
+        z-index: -1;
+
+        width: 5rem;
+        height: 5rem;
+        background-color: $main-color;
+
+    }
 }

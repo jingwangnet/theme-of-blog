@@ -1,12 +1,94 @@
 @import "basic";
 
 @include comment(Layout);
+main {
+    aside {
+        figure {
+            img {
+                max-width: 100px;
+            }
+        }
+    } 
+
+}
 
 @include comment(typography);
+main {
+    article {
+        > header {
+            h1 {
+                line-height: 1.1;
+            }
+    
+        }
+    
+        div#sections-wrapper {
+            section {
+                margin: 1rem;
+                h2 {
+                    @extend %border-bottom;
+                }
+                ul {
+                    padding-left: 1rem;
+                }
+            }
+    
+        }
+    }
+
+    aside {
+        section {
+            margin: 1rem;
+            
+        }
+
+        section#aside-info {
+
+            figure {
+                text-align: center;
+                padding: 1rem;
+            }
+
+            ul {
+                padding: 1rem;
+            }
+        }
 
 
-@include comment('layout 500');
-@include comment('typography 500');
+    } 
+
+}
+
+@include minw(500) {
+    @include comment('layout 500');
+    main {
+        article {
+            div#sections-wrapper {
+                @include displayFlex();
+                section {
+                    flex: auto;
+                }
+    
+            }
+        }
+    
+        aside {
+            section#aside-info {
+                @include displayFlex($justify: flex-start);
+    
+            }
+        }
+    }
+    @include comment('typography 500');
+    main {
+        aside {
+            section#aside-info {
+                padding: 2rem;
+    
+            }
+        }
+    }
+}
 
 @include comment('layout 700');
 @include comment('typography 700');
