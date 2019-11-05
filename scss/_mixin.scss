@@ -18,22 +18,22 @@
     justify-content: $justify;
 }
 
-@mixin decorateFont($size: 1rem, $weight: 400, $color: #333, $deco: none) {
-    font-size: $size;
+@mixin decorateFont($variant: normal, $weight: 400, $size: 1rem, $line-height: 1.3,$color: #333) {
+    font-variant: $variant; 
     font-weight: $weight;
+    font-weight: $size;
+    line-height: $line-height;
     color: $color;
-    text-decoration: $deco;
-
 }
     
 
 @mixin fontSize ($level:1) {
     @if $level == 1 {          //h3
-        font-size: 1.618rem;
+        font-size: 1.5rem;
     } @else  if $level == 2 {  //h2
-        font-size: 2.618rem;
+        font-size: 2rem;
     } @else  if $level == 3 {  //h1
-        font-size: 4.236rem;
+        font-size: 2.5rem;
     }   
     
 }

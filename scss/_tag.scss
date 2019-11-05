@@ -1,0 +1,46 @@
+@import "mixin";
+@import "var";
+
+//inline
+a {
+    text-decoration: none;
+    color: #333;
+}
+img {
+    max-width: 100%;
+}
+
+label{
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+input {
+    display: inline-block;
+    appearance:none;
+    -webkit-appearance:none;
+    border-radius: 0;
+}
+
+input[type=search] {
+    text-transform: uppercase;
+	outline:none;
+    border: none;
+    padding: 1rem;
+    border-bottom: 2px solid $second-color;
+
+    @include fontSize(1);
+
+    &:focus {
+        @include fontSize(1);
+        background: $second-color;
+        color: $third-color;
+    }
+}
+
+@include comment("block");
+ul {
+    list-style: none;
+}
+
+

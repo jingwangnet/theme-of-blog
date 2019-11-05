@@ -1,0 +1,43 @@
+@import "mixin";
+@import "var";
+%border {
+    border: 1px solid black;
+}
+
+
+.btn {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+
+.list-link {
+    @include decorateFont($weight: 700);
+    display: block;
+    padding: .5rem 0;
+    text-transform: uppercase;
+
+    &:link, &:visited {
+        color: #333;
+    }
+
+    &:hover{
+        border-bottom: 2px solid black;
+    }
+
+    &:active {
+        background: $second-color;
+        color: $third-color;
+    }
+
+    
+
+}
+
+
+i.fas, i.fab {
+    display: inline-block;
+    width: 1.5rem;
+    text-align: center;
+
+}

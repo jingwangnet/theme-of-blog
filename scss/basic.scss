@@ -1,5 +1,6 @@
 @import "mixin";
 @import "tag";
+@import "component";
 @import "var";
 
 @include comment(Ready);
@@ -23,7 +24,111 @@ body {
 
 
 @include comment("Layout");
+body {
+    >header {
+        div#logo {
+            display: flex;
+            @include displayFlex();
+
+            h1 {
+                a {
+                    display: block;
+                }
+            }
+            div#icon-menu {
+                flex: auto;
+                @include displayFlex($justify:flex-end, $wrap: nowrap);
+
+            }
+
+        }
+
+        div#nav-wrapper{ 
+           nav#nav-menu{
+               display: none;
+
+               &.active {
+                   display: block;
+               }
+
+                a {
+                    display: block;
+                }
+               
+           }  
+
+           form#nav-search {
+               display: none;
+
+               &.active {
+                    display: block;
+                   @include displayFlex($wrap:nowrap);
+               }
+
+               input {
+                    flex: auto;
+                    // max-width: 70%;
+               }
+           }
+        }
+    }
+    
+}
+
 @include comment("Typography");
+body {
+    main, >aside {
+        @extend %border;
+        margin-bottom: 1rem;
+    }
+
+    >header {
+        div#logo {
+            h1 {
+                padding: 1rem 2rem;
+                a {
+                    background: $main-color;
+                    padding: 1rem;
+                    line-height: 1;
+                    color: white;
+                    box-shadow: -1rem -1rem  $second-color;
+                }
+            }
+
+            div#icon-menu {
+                margin-left: 1rem;
+            }
+        }
+
+        div#nav-wrapper {
+            nav#nav-menu{
+                ul {
+                    & li:last-of-type a:hover {
+                        border: none;
+                    }
+                    li {
+                        padding: 0 1rem;
+                    }
+                }
+            }
+
+            form#nav-search {
+                padding: 1rem ;
+                label {
+                    @include decorateFont($weight:700);
+                }
+
+                input {
+                    margin-left: 1rem;
+                    width: 60%;
+                }
+
+            }
+        }
+    }
+    
+    
+}
 
 @include comment('Layout 500');
 @include comment('Typography 500');
