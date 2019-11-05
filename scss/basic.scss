@@ -1,4 +1,5 @@
 @import "mixin";
+@import "tag";
 @import "var";
 
 @include comment(Ready);
@@ -20,204 +21,15 @@ body {
     min-height: 100vh;
 }
 
-@include comment(Common tag);
-ul {
-    list-style: none;
-}
 
+@include comment("Layout");
+@include comment("Typography");
 
-i.fab, i.fas {
-    display: inline-block;
-    width: 1.5rem;
-    text-align: center;
-} 
+@include comment('Layout 500');
+@include comment('Typography 500');
 
-h2 {
-    // margin: 1.5rem 0 1rem;
-    border-bottom: 2px solid  black;
-    @include fontSize(1);
-}
+@include comment('Layout 700');
+@include comment('Typography 700');
 
-a {
-    color: #333;
-}
-
-nav ul li a {
-    display: block;
-    padding: 1rem;
-    cursor: pointer;
-    @include decorateFont($size: 1.2rem, $weight: 700);
-}
-
-@include comment(Layout);
-
-body {
-    display: flex;
-    flex-flow: column nowrap ;
-    
-    > header {
-        #logo {
-            @include displayFlex;
-
-            h1 {
-                @include fontSize(2);
-            }
-
-            #icon-menu {
-                flex: auto;
-                display: flex;
-                flex-flow: row wrap;
-                align-items: center;
-                justify-content: flex-end;
-            }
-        }
-
-        #nav-wrapper {
-            nav {
-                display: none;
-
-                &.active {
-                    display: block;
-                }
-            }
-
-
-            form {
-                display: none;;
-
-                &.active {
-                    display: block;
-                }
-            }
-
-        }
-    }
-    main {
-        flex: auto;
-    }
-
-
-}
-
-@include minw(900){
-    body {
-        > header {
-            @include displayFlex();
-
-            #logo {
-                display: block;
-                #icon-menu {
-                    display: none;
-                }
-            }
-    
-            #nav-wrapper {
-                flex: auto;
-
-                @include displayFlex();
-
-
-                nav {
-                    display: block;
-                    flex: auto;
-
-                    ul {
-                        @include displayFlex($justify: flex-end);
-                    }
-
-                }
-                form {
-                    display: block;
-                }
-    
-            }
-        }
-    }
-
-    main {
-        @include displayFlex($wrap: nowrap);
-        align-items: normal;
-    }
-}
-
-@include comment(Typography);
-
-body {
-    padding: 1rem;
-    
-    > header {
-        #logo {
-            #icon-menu {
-                a {
-                    display: block;
-                    padding: 1rem;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        #nav-wrapper {
-            #nav-menu {
-                ul {
-                    li {
-                        a {
-                            @include fontSize(1);
-                        }
-                    }
-                }
-
-            }
-        }
-    }
-    main {
-        flex: auto;
-    }
-
-    footer {
-        text-align: center;
-        padding: 1rem;
-    }
-}
-
-@include minw(900){
-
-    body {
-        padding: 0 #{calc(50% - 600px)};
-        
-        > header {
-            padding: 2rem 1rem;
-
-            #nav-wrapper {
-                form {
-
-                    @include decorateFont($size: 1.2rem, $weight: 700);
-                    label {
-                        text-transform: capitalize;
-                        display: inline-block;
-                        padding: 1rem;
-                    }
-
-                    input {
-                        max-width: 15rem;
-                        border: none;
-                        @include fontSize(1);
-                        border-bottom: 3px solid #333 ;
-                        padding: 1rem 
-                    }
-
-                }
-
-                #nav-menu {
-                    ul {
-                        li {
-                            a {
-                               padding: 0;
-                               padding-right: 1rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+@include comment('Layout 900');
+@include comment('Typography 900');
