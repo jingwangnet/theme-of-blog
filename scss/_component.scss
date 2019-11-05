@@ -17,14 +17,6 @@
     padding: .5rem 0;
     text-transform: uppercase;
 
-    &:link, &:visited {
-        color: #333;
-    }
-
-    &:hover{
-        border-bottom: 2px solid black;
-    }
-
     &:active {
         background: $second-color;
         color: $third-color;

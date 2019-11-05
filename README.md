@@ -1,5 +1,7 @@
 # theme of blog
 
+[perview theme](http://jingwang.me)
+
 ## Need 
 
 * Simple
@@ -11,7 +13,7 @@
 
 ## page
 
-- [ ] index
+- [x] index
 - [ ] index-mobile
 - [ ] blog-index
 - [ ] blog-index-mobile

@@ -137,6 +137,46 @@ body {
 @include minw(900) {
     @include comment('Layout 900');
     body {
+        header {
+            @include displayFlex($justify: flex-start);
+            div#logo {
+    
+                h1 {
+                    a {
+                        display: block;
+                    }
+                }
+                div#icon-menu {
+                    display: none;
+                }
+    
+            }
+    
+            div#nav-wrapper{ 
+                flex: auto;
+               @include displayFlex($justify: flex-start);
+               nav#nav-menu{
+                    flex: auto;
+                    display: block;
+                    ul {
+                       @include displayFlex($justify: flex-start);
+                    }
+                }  
+    
+               form#nav-search {
+                   display: block;
+    
+                   &.active {
+                        display: block;
+                   }
+    
+                   input {
+                        flex: auto;
+                        width: 70%;
+                   }
+               }
+            }
+        }
         main {
             @include displayFlex($align-items: norma, $wrap: nowrap);
         }

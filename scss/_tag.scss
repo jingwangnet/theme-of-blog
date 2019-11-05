@@ -5,7 +5,17 @@
 a {
     text-decoration: none;
     color: #333;
+    &:hover {
+        color: $main-color;
+    }
+
+    &:active {
+        background-color:$second-color;
+        color: $third-color;
+    }
 }
+
+
 img {
     max-width: 100%;
 }
