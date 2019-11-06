@@ -128,7 +128,7 @@ body {
 @include minw(900) {
     @include comment('Layout 900');
     body {
-        header {
+        > header {
             @include displayFlex($justify: flex-start);
             div#logo {
     
@@ -164,7 +164,7 @@ body {
             }
         }
         main {
-            @include displayFlex($align-items: norma, $wrap: nowrap);
+            @include displayFlex($align-items: normal, $wrap: nowrap);
         }
     }
     @include comment('Typography 900');

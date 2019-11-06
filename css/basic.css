@@ -225,45 +225,45 @@ body > header div#nav-wrapper form#nav-search input {
 @media (min-width: 56.25em) {
   /*    Layout 900 
   --------------------------------------------------*/
-  body header {
+  body > header {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
   }
-  body header div#logo h1 a {
+  body > header div#logo h1 a {
     display: block;
   }
-  body header div#logo div#icon-menu {
+  body > header div#logo div#icon-menu {
     display: none;
   }
-  body header div#nav-wrapper {
+  body > header div#nav-wrapper {
     flex: auto;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
   }
-  body header div#nav-wrapper nav#nav-menu {
+  body > header div#nav-wrapper nav#nav-menu {
     flex: auto;
     display: block;
   }
-  body header div#nav-wrapper nav#nav-menu ul {
+  body > header div#nav-wrapper nav#nav-menu ul {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
   }
-  body header div#nav-wrapper form#nav-search {
+  body > header div#nav-wrapper form#nav-search {
     display: block;
   }
-  body header div#nav-wrapper form#nav-search.active {
+  body > header div#nav-wrapper form#nav-search.active {
     display: block;
   }
   body main {
     display: flex;
     flex-flow: row nowrap;
-    align-items: norma;
+    align-items: normal;
     justify-content: center;
   }
 
