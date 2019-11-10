@@ -243,10 +243,45 @@ body > header div#nav-wrapper form#nav-search input {
     margin-left: 1rem;
   }
 }
-/*    Layout 700 
---------------------------------------------------*/
-/*    Typography 700 
---------------------------------------------------*/
+@media (min-width: 43.75em) {
+  /*    Layout 700 
+  --------------------------------------------------*/
+  body > header div#logo h1 a {
+    display: block;
+  }
+  body > header div#logo div#icon-menu {
+    display: none;
+  }
+  body > header div#nav-wrapper {
+    flex: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  body > header div#nav-wrapper nav#nav-menu {
+    flex: auto;
+    display: block;
+  }
+  body > header div#nav-wrapper nav#nav-menu ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  body > header div#nav-wrapper form#nav-search {
+    display: block;
+  }
+  body > header div#nav-wrapper form#nav-search.active {
+    display: block;
+  }
+
+  /*    Typography 700 
+  --------------------------------------------------*/
+  body > header div#nav-wrapper form#nav-search {
+    padding: 0;
+  }
+}
 @media (min-width: 56.25em) {
   /*    Layout 900 
   --------------------------------------------------*/
@@ -255,12 +290,6 @@ body > header div#nav-wrapper form#nav-search input {
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
-  }
-  body > header div#logo h1 a {
-    display: block;
-  }
-  body > header div#logo div#icon-menu {
-    display: none;
   }
   body > header div#nav-wrapper {
     flex: auto;

@@ -141,16 +141,11 @@ body {
     }
 }
 
-@include comment('Layout 700');
-@include comment('Typography 700');
-
-@include minw(900) {
-    @include comment('Layout 900');
+@include minw(700){
+    @include comment('Layout 700');
     body {
         > header {
-            @include displayFlex($justify: flex-start);
             div#logo {
-    
                 h1 {
                     a {
                         display: block;
@@ -159,13 +154,51 @@ body {
                 div#icon-menu {
                     display: none;
                 }
-    
             }
     
             div#nav-wrapper{ 
                 flex: auto;
                @include displayFlex($justify: flex-start);
                nav#nav-menu{
+                    flex: auto;
+                    display: block;
+                    ul {
+                       @include displayFlex($justify: flex-start);
+                    }
+                }  
+    
+               form#nav-search {
+                   display: block;
+    
+                   &.active {
+                        display: block;
+                   }
+               }
+            }
+        }
+    }
+    @include comment('Typography 700');
+    body {
+        > header {
+            div#nav-wrapper{ 
+                form#nav-search {
+                   padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@include minw(900) {
+    @include comment('Layout 900');
+    body {
+        > header {
+            @include displayFlex($justify: flex-start);
+    
+            div#nav-wrapper{ 
+                flex: auto;
+                @include displayFlex($justify: flex-start);
+                nav#nav-menu{
                     flex: auto;
                     display: block;
                     ul {
