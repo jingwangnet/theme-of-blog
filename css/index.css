@@ -46,8 +46,7 @@ ul {
 
 h1 {
   font-size: 2rem;
-  padding: 0 1rem;
-  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 p {
@@ -58,36 +57,6 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
-}
-
-section {
-  position: relative;
-}
-section::before {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  display: block;
-  content: " ";
-  z-index: -2;
-  width: 6rem;
-  height: 6rem;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-section::after {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  content: "JINGWANG";
-  color: white;
-  z-index: -1;
-  width: 6rem;
-  height: 6rem;
-  background-color: rgba(16, 128, 251, 0.5);
 }
 
 .btn {
@@ -122,6 +91,36 @@ main article div#sections-wrapper section h2 {
 
 .box-shadow {
   box-shadow: 0 0 3px 3px black;
+}
+
+.bg-logo {
+  position: relative;
+}
+.bg-logo::before {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: block;
+  content: " ";
+  z-index: -2;
+  width: 6rem;
+  height: 6rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bg-logo::after {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  content: "JINGWANG";
+  color: white;
+  z-index: -1;
+  width: 6rem;
+  height: 6rem;
+  background-color: rgba(16, 128, 251, 0.5);
 }
 
 /*    Ready 
@@ -191,9 +190,6 @@ body main {
 body > header, body main {
   margin-bottom: 1rem;
 }
-body > header div#logo h1 {
-  padding: 1rem 2rem;
-}
 body > header div#logo h1 a {
   background: #1080fb;
   padding: 1rem;
@@ -218,10 +214,18 @@ body > header div#nav-wrapper form#nav-search input {
   padding: 1rem;
 }
 
-/*    Layout 500 
---------------------------------------------------*/
-/*    Typography 500 
---------------------------------------------------*/
+@media (min-width: 31.25em) {
+  /*    Layout 500 
+  --------------------------------------------------*/
+  /*    Typography 500 
+  --------------------------------------------------*/
+  body > header div#logo h1 {
+    padding: 1rem 2rem;
+  }
+  body > header div#logo div#icon-menu {
+    margin-left: 1rem;
+  }
+}
 /*    Layout 700 
 --------------------------------------------------*/
 /*    Typography 700 
@@ -303,6 +307,9 @@ main article div#sections-wrapper section {
 main article div#sections-wrapper section ul {
   padding-left: 1rem;
 }
+main article div#sections-wrapper section ul li a {
+  padding: 1rem 0;
+}
 main aside section {
   margin: 1rem;
 }
@@ -346,6 +353,9 @@ main aside section#aside-info ul {
 @media (min-width: 56.25em) {
   /*    layout 900 
   --------------------------------------------------*/
+  main article {
+    flex: auto;
+  }
   main aside section#aside-info {
     display: block;
   }

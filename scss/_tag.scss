@@ -56,8 +56,7 @@ ul {
 
 h1  {
     @include fontSize(2);
-    padding: 0 1rem;
-    margin-bottom: 1rem;
+    padding:1rem;
 }
 
 p  {
@@ -65,34 +64,4 @@ p  {
     margin-bottom: 1rem;
     @include decorateFont($size: 1rem, $weight: 500, $line-height: 1.5 );
 }
-section {
-    position: relative;
 
-    &::before {
-        position: absolute;
-        bottom: 2rem;
-        right: 2rem;
-        display: block;
-        content: " ";
-        z-index: -2;
-
-        width: 6rem;
-        height: 6rem;
-        background-color: rgba($second-color, .5);
-
-    }
-    &::after {
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        @include displayFlex();
-        content: "JINGWANG";
-        color: white;
-        z-index: -1;
-
-        width: 6rem;
-        height: 6rem;
-        background-color: rgba($main-color, .5);
-
-    }
-}

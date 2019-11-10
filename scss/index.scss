@@ -30,6 +30,12 @@ main {
                 }
                 ul {
                     padding-left: 1rem;
+
+                    li {
+                        a {
+                            padding: 1rem 0 ;
+                        }
+                    }
                 }
             }
     
@@ -96,15 +102,9 @@ main {
 @include minw(900) {
     @include comment('layout 900');
     main {
-        // article {
-        //     div#sections-wrapper {
-        //         @include displayFlex();
-        //         section {
-        //             flex: auto;
-        //         }
-    
-        //     }
-        // }
+        article {
+            flex: auto;
+        }
     
         aside {
             section#aside-info {
@@ -115,16 +115,6 @@ main {
     }
     @include comment('typography 900');
     main {
-        // article {
-        //     div#sections-wrapper {
-        //         @include displayFlex();
-        //         section {
-        //             flex: auto;
-        //         }
-    
-        //     }
-        // }
-    
         aside {
             section#aside-info {
                 display: block;

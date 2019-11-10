@@ -78,7 +78,6 @@ body {
     >header {
         div#logo {
             h1 {
-                padding: 1rem 2rem;
                 a {
                     background: $main-color;
                     padding: 1rem;
@@ -119,8 +118,24 @@ body {
     
 }
 
-@include comment('Layout 500');
-@include comment('Typography 500');
+
+@include minw(500){
+   @include comment('Layout 500');
+   @include comment('Typography 500');
+    body {
+        >header {
+            div#logo {
+                h1 {
+                    padding: 1rem 2rem;
+                }
+    
+                div#icon-menu {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
 
 @include comment('Layout 700');
 @include comment('Typography 700');
