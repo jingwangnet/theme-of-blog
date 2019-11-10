@@ -119,6 +119,20 @@ i.fas, i.fab {
   background-color: rgba(16, 128, 251, 0.5);
 }
 
+@keyframes scale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.01);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 /*    Ready 
 --------------------------------------------------*/
 * {
@@ -195,6 +209,9 @@ body > header div#logo h1 a {
 }
 body > header div#logo div#icon-menu {
   margin-left: 1rem;
+}
+body > header div#nav-wrapper > * {
+  animation: scale 0.7s ease-in-out;
 }
 body > header div#nav-wrapper nav#nav-menu ul li:last-of-type a:hover {
   border: none;

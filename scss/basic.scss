@@ -46,9 +46,9 @@ body {
            nav#nav-menu{
                display: none;
 
-               &.active {
+                &.active {
                    display: block;
-               }
+                }
 
                 a {
                     display: block;
@@ -93,6 +93,10 @@ body {
         }
 
         div#nav-wrapper {
+
+            > * {
+                animation: scale 0.7s ease-in-out;
+            }
             nav#nav-menu{
                 ul {
                     & li:last-of-type a:hover {
