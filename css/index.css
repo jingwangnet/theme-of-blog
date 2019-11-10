@@ -269,6 +269,12 @@ body > header div#nav-wrapper form#nav-search input {
     align-items: center;
     justify-content: flex-start;
   }
+  body > header div#nav-wrapper nav#nav-menu ul li {
+    padding: 0;
+  }
+  body > header div#nav-wrapper nav#nav-menu ul li a {
+    padding: 1rem;
+  }
   body > header div#nav-wrapper form#nav-search {
     display: block;
   }
@@ -307,6 +313,9 @@ body > header div#nav-wrapper form#nav-search input {
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
+  }
+  body > header div#nav-wrapper nav#nav-menu ul li a {
+    padding: 1rem;
   }
   body > header div#nav-wrapper form#nav-search {
     display: block;

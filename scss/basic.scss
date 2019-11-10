@@ -164,6 +164,12 @@ body {
                     display: block;
                     ul {
                        @include displayFlex($justify: flex-start);
+                       li {
+                           padding: 0;
+                           a {
+                               padding: 1rem;
+                            }
+                        }
                     }
                 }  
     
@@ -203,6 +209,11 @@ body {
                     display: block;
                     ul {
                        @include displayFlex($justify: flex-start);
+                        li {
+                            a  {
+                                padding: 1rem; 
+                            }
+                        }
                     }
                 }  
     
