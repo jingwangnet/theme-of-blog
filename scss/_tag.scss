@@ -11,8 +11,7 @@ a {
     }
 
     &:active {
-        background-color:$second-color;
-        color: $third-color;
+        color: $main-color;
     }
 }
 

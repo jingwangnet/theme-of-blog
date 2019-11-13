@@ -7,8 +7,7 @@ a:hover {
   color: #1080fb;
 }
 a:active {
-  background-color: black;
-  color: white;
+  color: #1080fb;
 }
 
 img {
@@ -73,10 +72,6 @@ p {
   display: block;
   padding: 0.5rem 0;
   text-transform: uppercase;
-}
-.list-link:active {
-  background: black;
-  color: white;
 }
 
 i.fas, i.fab {
@@ -265,12 +260,6 @@ body > header div#nav-wrapper form#nav-search input {
     align-items: center;
     justify-content: flex-start;
   }
-  body > header div#nav-wrapper nav#nav-menu ul li {
-    padding: 0;
-  }
-  body > header div#nav-wrapper nav#nav-menu ul li a {
-    padding: 1rem;
-  }
   body > header div#nav-wrapper form#nav-search {
     display: block;
   }
@@ -280,8 +269,11 @@ body > header div#nav-wrapper form#nav-search input {
 
   /*    Typography 700 
   --------------------------------------------------*/
-  body > header div#nav-wrapper form#nav-search {
+  body > header div#nav-wrapper nav#nav-menu ul li {
     padding: 0;
+  }
+  body > header div#nav-wrapper nav#nav-menu ul li a {
+    padding: 1rem;
   }
 }
 @media (min-width: 56.25em) {

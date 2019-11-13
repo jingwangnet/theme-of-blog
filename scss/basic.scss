@@ -158,28 +158,22 @@ body {
     
             div#nav-wrapper{ 
                 flex: auto;
-               @include displayFlex($justify: flex-start);
-               nav#nav-menu{
+                @include displayFlex($justify: flex-start);
+                nav#nav-menu{
                     flex: auto;
                     display: block;
                     ul {
-                       @include displayFlex($justify: flex-start);
-                       li {
-                           padding: 0;
-                           a {
-                               padding: 1rem;
-                            }
-                        }
+                        @include displayFlex($justify: flex-start);
                     }
-                }  
+                 }  
     
-               form#nav-search {
-                   display: block;
+                form#nav-search {
+                    display: block;
     
-                   &.active {
-                        display: block;
-                   }
-               }
+                    &.active {
+                         display: block;
+                    }
+                }
             }
         }
     }
@@ -187,9 +181,16 @@ body {
     body {
         > header {
             div#nav-wrapper{ 
-                form#nav-search {
-                   padding: 0;
-                }
+                nav#nav-menu{
+                    ul {
+                        li {
+                            padding: 0;
+                            a {
+                                padding: 1rem;
+                            }
+                        }
+                    }
+                }  
             }
         }
     }
