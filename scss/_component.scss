@@ -49,7 +49,7 @@ i.fas, i.fab {
 
         width: 6rem;
         height: 6rem;
-        background-color: rgba($second-color, .5);
+        background-color: $second-color;
 
     }
     &::after {
@@ -63,7 +63,7 @@ i.fas, i.fab {
 
         width: 6rem;
         height: 6rem;
-        background-color: rgba($main-color, .5);
+        background-color: $main-color;
 
     }
 }

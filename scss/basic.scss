@@ -4,6 +4,7 @@
 @import "var";
 
 @include comment(Ready);
+
 * {
     margin: 0;
     padding: 0;
@@ -16,14 +17,17 @@ html {
     text-rendering: optimizelegibility;
 }
 
-html, body {
+html,
+body {
     min-height: 100vh;
 }
 
 
 @include comment("Layout");
+
 body {
     @include displayFlex($direction: column, $wrap: nowrap, $align-items: normal);
+
     >header {
         div#logo {
             @include displayFlex($justify: flex-start);
@@ -33,6 +37,7 @@ body {
                     display: block;
                 }
             }
+
             div#icon-menu {
                 flex: auto;
                 @include displayFlex($justify:flex-end, $wrap: nowrap);
@@ -41,97 +46,105 @@ body {
 
         }
 
-        div#nav-wrapper{ 
-           nav#nav-menu{
-               display: none;
+        div#nav-wrapper {
+            nav#nav-menu {
+                display: none;
 
                 &.active {
-                   display: block;
+                    display: block;
                 }
 
                 a {
                     display: block;
                 }
-               
-           }  
 
-           form#nav-search {
-               display: none;
-
-               &.active {
-                    display: block;
-               }
-            }
-        }
-    }
-    .content-container { flex: auto;}
-    
-}
-
-@include comment("Typography");
-body {
-    >header, main {
-        margin-bottom: 1rem;
-    }
-
-    >header .
-        div#logo {
-            h1 {
-                a {
-                    background: $main-color;
-                    padding: 1rem;
-                    line-height: 1;
-                    color: white;
-                    box-shadow: -1rem -1rem  $second-color;
-                }
-            }
-
-            div#icon-menu {
-                margin-left: 1rem;
-            }
-        }
-
-        div#nav-wrapper {
-
-            > * {
-                animation: scale 0.7s ease-in-out;
-            }
-            nav#nav-menu{
-                ul {
-                    & li:last-of-type a:hover {
-                        border: none;
-                    }
-                    li {
-                        padding: 0 1rem;
-                    }
-                }
             }
 
             form#nav-search {
-                padding: 1rem;
-                input {
-                    width: 100%;
-                    padding: 1rem;
-                }
+                display: none;
 
+                &.active {
+                    display: block;
+                }
             }
         }
     }
-    
-    
+
+    .content-container {
+        flex: auto;
+    }
+
+}
+
+@include comment("Typography");
+
+body {
+
+    >header,
+    >div.content-container {
+        margin-bottom: 1rem;
+    }
+
+    >header div#logo {
+        h1 {
+            a {
+                background: $main-color;
+                padding: 1rem;
+                line-height: 1;
+                color: white;
+                box-shadow: -1rem -1rem $second-color;
+            }
+        }
+
+        div#icon-menu {
+            margin-left: 1rem;
+        }
+    }
+
+    div#nav-wrapper {
+
+        >* {
+            animation: scale 0.7s ease-in-out;
+        }
+
+        nav#nav-menu {
+            ul {
+                & li:last-of-type a:hover {
+                    border: none;
+                }
+
+                li {
+                    padding: 0 1rem;
+                }
+            }
+        }
+
+        form#nav-search {
+            padding: 1rem;
+
+            input {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+
+    }
+
 }
 
 
-@include minw(500){
-   @include comment('Layout 500');
-   @include comment('Typography 500');
+
+@include minw(500) {
+    @include comment('Layout 500');
+    @include comment('Typography 500');
+
     body {
         >header {
             div#logo {
                 h1 {
                     padding: 1rem 2rem;
                 }
-    
+
                 div#icon-menu {
                     margin-left: 1rem;
                 }
@@ -140,56 +153,63 @@ body {
     }
 }
 
-@include minw(700){
+@include minw(700) {
     @include comment('Layout 700');
+
     body {
-        > header {
+        >header {
             div#logo {
                 h1 {
                     a {
                         display: block;
                     }
                 }
+
                 div#icon-menu {
                     display: none;
                 }
             }
-    
-            div#nav-wrapper{ 
+
+            div#nav-wrapper {
                 flex: auto;
                 @include displayFlex($justify: flex-start);
-                nav#nav-menu{
+
+                nav#nav-menu {
                     flex: auto;
                     display: block;
+
                     ul {
                         @include displayFlex($justify: flex-start);
                     }
-                 }  
-    
+                }
+
                 form#nav-search {
                     display: block;
-    
+
                     &.active {
-                         display: block;
+                        display: block;
                     }
                 }
             }
         }
     }
+
     @include comment('Typography 700');
+
     body {
-        > header {
-            div#nav-wrapper{ 
-                nav#nav-menu{
+        >header {
+            div#nav-wrapper {
+                nav#nav-menu {
                     ul {
                         li {
                             padding: 0;
+
                             a {
                                 padding: 1rem;
                             }
                         }
                     }
-                }  
+                }
             }
         }
     }
@@ -197,40 +217,47 @@ body {
 
 @include minw(900) {
     @include comment('Layout 900');
+
     body {
-        > header {
+        >header {
             @include displayFlex($justify: flex-start);
-    
-            div#nav-wrapper{ 
+
+            div#nav-wrapper {
                 flex: auto;
                 @include displayFlex($justify: flex-start);
-                nav#nav-menu{
+
+                nav#nav-menu {
                     flex: auto;
                     display: block;
+
                     ul {
-                       @include displayFlex($justify: flex-start);
+                        @include displayFlex($justify: flex-start);
+
                         li {
-                            a  {
-                                padding: 1rem; 
+                            a {
+                                padding: 1rem;
                             }
                         }
                     }
-                }  
-    
-               form#nav-search {
-                   display: block;
-    
-                   &.active {
+                }
+
+                form#nav-search {
+                    display: block;
+
+                    &.active {
                         display: block;
-                   }
-               }
+                    }
+                }
             }
         }
+
         main {
             @include displayFlex($align-items: normal, $wrap: nowrap);
         }
     }
+
     @include comment('Typography 900');
+
     body {
         padding: 0 calc(50% - 480px);
     }
@@ -241,6 +268,7 @@ body {
     @include comment('Layout 900');
 
     @include comment('Typography 900');
+
     body {
         padding: 0 calc(50% - 600px);
     }

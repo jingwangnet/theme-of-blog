@@ -103,7 +103,7 @@ i.fas, i.fab {
   z-index: -2;
   width: 6rem;
   height: 6rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: black;
 }
 
 .bg-logo::after {
@@ -128,7 +128,7 @@ i.fas, i.fab {
   z-index: -1;
   width: 6rem;
   height: 6rem;
-  background-color: rgba(16, 128, 251, 0.5);
+  background-color: #1080fb;
 }
 
 @-webkit-keyframes scale {
@@ -182,7 +182,8 @@ html {
   text-rendering: optimizelegibility;
 }
 
-html, body {
+html,
+body {
   min-height: 100vh;
 }
 
@@ -224,7 +225,7 @@ body > header div#logo h1 a {
   display: block;
 }
 
-body > header div#logo div.icon-menu {
+body > header div#logo div#icon-menu {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
@@ -271,7 +272,8 @@ body .content-container {
 
 /*    Typography 
     --------------------------------------------------*/
-body > header, body main {
+body > header,
+body > div.content-container {
   margin-bottom: 1rem;
 }
 
@@ -284,28 +286,28 @@ body > header div#logo h1 a {
           box-shadow: -1rem -1rem black;
 }
 
-body > header div#logo div.icon-menu {
+body > header div#logo div#icon-menu {
   margin-left: 1rem;
 }
 
-body > header div#nav-wrapper > * {
+body div#nav-wrapper > * {
   -webkit-animation: scale 0.7s ease-in-out;
           animation: scale 0.7s ease-in-out;
 }
 
-body > header div#nav-wrapper nav#nav-menu ul li:last-of-type a:hover {
+body div#nav-wrapper nav#nav-menu ul li:last-of-type a:hover {
   border: none;
 }
 
-body > header div#nav-wrapper nav#nav-menu ul li {
+body div#nav-wrapper nav#nav-menu ul li {
   padding: 0 1rem;
 }
 
-body > header div#nav-wrapper form#nav-search {
+body div#nav-wrapper form#nav-search {
   padding: 1rem;
 }
 
-body > header div#nav-wrapper form#nav-search input {
+body div#nav-wrapper form#nav-search input {
   width: 100%;
   padding: 1rem;
 }
@@ -318,7 +320,7 @@ body > header div#nav-wrapper form#nav-search input {
   body > header div#logo h1 {
     padding: 1rem 2rem;
   }
-  body > header div#logo div.icon-menu {
+  body > header div#logo div#icon-menu {
     margin-left: 1rem;
   }
 }
@@ -329,7 +331,7 @@ body > header div#nav-wrapper form#nav-search input {
   body > header div#logo h1 a {
     display: block;
   }
-  body > header div#logo div.icon-menu {
+  body > header div#logo div#icon-menu {
     display: none;
   }
   body > header div#nav-wrapper {

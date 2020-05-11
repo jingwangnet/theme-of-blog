@@ -1,31 +1,35 @@
 @import "basic";
 
 @include comment(Layout);
+
 aside {
     figure {
         img {
             max-width: 100px;
         }
     }
-} 
+}
 
 
 @include comment(typography);
+
 main {
     article {
-        > header {
+        >header {
             h1 {
                 line-height: 1.1;
             }
-    
+
         }
-    
+
         div#sections-wrapper {
             section {
                 margin: 1rem;
+
                 h2 {
                     @extend %border-bottom;
                 }
+
                 ul {
 
                     li {
@@ -35,18 +39,21 @@ main {
                     }
                 }
             }
-    
+
         }
     }
 
 }
+
 aside {
     section {
         margin: 1rem;
-        
+
     }
 
     section#aside-info {
+        padding: 1rem;
+
 
         figure {
             text-align: center;
@@ -55,23 +62,41 @@ aside {
 
         ul {
             padding: 1rem;
+            background: rgba(black, .5);
+            color: white;
+
+            a {
+                text-decoration: none;
+                color: white; 
+                transition: all 1s;
+                &:hover {
+                    color: $main-color;
+                }
+            
+                &:active {
+                    color: $main-color;
+                }
+            }
+
         }
     }
 
 
-} 
+}
 
 
 @include minw(500) {
     @include comment('layout 500');
+
     main {
         article {
             div#sections-wrapper {
                 @include displayFlex();
+
                 section {
                     flex: auto;
                 }
-    
+
             }
         }
     }
@@ -80,17 +105,18 @@ aside {
         section#aside-info {
             @include displayFlex($justify: flex-start);
             width: fit-content;
-    
         }
     }
+
     @include comment('typography 500');
+
     aside {
         section#aside-info {
             padding: 2rem;
-    
+
         }
     }
-   
+
 }
 
 @include comment('layout 700');
@@ -98,6 +124,7 @@ aside {
 
 @include minw(900) {
     @include comment('layout 900');
+
     .content-container {
         @include displayFlex($wrap: nowrap, $align-items: start);
 
@@ -105,6 +132,7 @@ aside {
         main {
             flex: auto;
             margin-right: 1rem;
+
             article {
                 flex: auto;
             }
@@ -119,14 +147,16 @@ aside {
         }
 
     }
+
     @include comment('typography 900');
+
     aside {
         section#aside-info {
             display: block;
             padding: 2rem 1rem;
 
             min-width: 280px;
-    
+
         }
     }
 }
