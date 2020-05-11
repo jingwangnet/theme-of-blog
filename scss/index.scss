@@ -2,6 +2,17 @@
 
 @include comment(Layout);
 
+main {
+    article {
+        >header {
+            min-height: 20vh;
+            @include displayFlex($direction: column);
+            h1 {
+                line-height: 1.1;
+            }
+        }
+    }
+}
 aside {
     figure {
         img {

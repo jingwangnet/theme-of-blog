@@ -493,6 +493,27 @@ body div#nav-wrapper form#nav-search input {
 
 /*    Layout 
     --------------------------------------------------*/
+main article > header {
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main article > header h1 {
+  line-height: 1.1;
+}
+
 aside figure img {
   max-width: 100px;
 }
