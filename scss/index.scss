@@ -1,16 +1,14 @@
 @import "basic";
 
 @include comment(Layout);
-main {
-    aside {
-        figure {
-            img {
-                max-width: 100px;
-            }
+aside {
+    figure {
+        img {
+            max-width: 100px;
         }
-    } 
+    }
+} 
 
-}
 
 @include comment(typography);
 main {
@@ -41,28 +39,28 @@ main {
         }
     }
 
-    aside {
-        section {
-            margin: 1rem;
-            
-        }
-
-        section#aside-info {
-
-            figure {
-                text-align: center;
-                padding: 1rem;
-            }
-
-            ul {
-                padding: 1rem;
-            }
-        }
-
-
-    } 
-
 }
+aside {
+    section {
+        margin: 1rem;
+        
+    }
+
+    section#aside-info {
+
+        figure {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        ul {
+            padding: 1rem;
+        }
+    }
+
+
+} 
+
 
 @include minw(500) {
     @include comment('layout 500');
@@ -76,23 +74,23 @@ main {
     
             }
         }
+    }
+
+    aside {
+        section#aside-info {
+            @include displayFlex($justify: flex-start);
+            width: fit-content;
     
-        aside {
-            section#aside-info {
-                @include displayFlex($justify: flex-start);
-    
-            }
         }
     }
     @include comment('typography 500');
-    main {
-        aside {
-            section#aside-info {
-                padding: 2rem;
+    aside {
+        section#aside-info {
+            padding: 2rem;
     
-            }
         }
     }
+   
 }
 
 @include comment('layout 700');
@@ -100,29 +98,35 @@ main {
 
 @include minw(900) {
     @include comment('layout 900');
-    main {
-        article {
+    .content-container {
+        @include displayFlex($wrap: nowrap, $align-items: start);
+
+
+        main {
             flex: auto;
+            margin-right: 1rem;
+            article {
+                flex: auto;
+            }
+
         }
-    
+
         aside {
             section#aside-info {
                 display: block;
-    
+
             }
         }
+
     }
     @include comment('typography 900');
-    main {
-        aside {
-            section#aside-info {
-                display: block;
-                padding: 2rem 1rem;
+    aside {
+        section#aside-info {
+            display: block;
+            padding: 2rem 1rem;
 
-                min-width: 280px;
+            min-width: 280px;
     
-            }
         }
     }
-
 }

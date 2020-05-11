@@ -26,7 +26,6 @@ body {
     @include displayFlex($direction: column, $wrap: nowrap, $align-items: normal);
     >header {
         div#logo {
-            display: flex;
             @include displayFlex($justify: flex-start);
 
             h1 {
@@ -65,7 +64,7 @@ body {
             }
         }
     }
-    main { flex: auto;}
+    .content-container { flex: auto;}
     
 }
 
@@ -75,7 +74,7 @@ body {
         margin-bottom: 1rem;
     }
 
-    >header {
+    >header .
         div#logo {
             h1 {
                 a {
