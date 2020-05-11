@@ -55,11 +55,12 @@ ul {
 
 h1  {
     @include fontSize(2);
-    padding:1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 p  {
-    padding: 0 1rem;
+    padding: 1rem;
     margin-bottom: 1rem;
     @include decorateFont($size: 1rem, $weight: 500, $line-height: 1.5 );
 }

@@ -51,10 +51,11 @@ ul {
 h1 {
   font-size: 2rem;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 p {
-  padding: 0 1rem;
+  padding: 1rem;
   margin-bottom: 1rem;
   font-variant: normal;
   font-weight: 500;
@@ -498,20 +499,28 @@ main article > header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main article > header h1, main article > header p {
+  width: 100%;
+  padding: 0;
+  margin: 0 1rem;
 }
 
 main article > header h1 {
-  line-height: 1.1;
+  margin-bottom: 1rem;
 }
 
 aside figure img {
@@ -522,6 +531,10 @@ aside figure img {
     --------------------------------------------------*/
 main article > header h1 {
   line-height: 1.1;
+}
+
+main article > header h1, main article > header p {
+  text-align: center;
 }
 
 main article div#sections-wrapper section {
@@ -618,6 +631,15 @@ aside section#aside-info ul a:active {
     --------------------------------------------------*/
 /*    typography 700 
     --------------------------------------------------*/
+@media (min-width: 43.75em) {
+  main article > header {
+    min-height: 15vh;
+  }
+  main article > header h1, main article > header p {
+    text-align: left;
+  }
+}
+
 @media (min-width: 56.25em) {
   /*    layout 900 
     --------------------------------------------------*/

@@ -6,10 +6,18 @@ main {
     article {
         >header {
             min-height: 20vh;
-            @include displayFlex($direction: column);
-            h1 {
-                line-height: 1.1;
+            @include displayFlex();
+            align-content: center;
+            h1, p {
+                width: 100%;
+                padding: 0;
+                margin:  0 1rem;
             }
+
+            h1 {
+                margin-bottom:  1rem;
+            }
+            
         }
     }
 }
@@ -24,11 +32,18 @@ aside {
 
 @include comment(typography);
 
+
+
+
 main {
     article {
         >header {
             h1 {
                 line-height: 1.1;
+            }
+
+            h1, p {
+                text-align: center;
             }
 
         }
@@ -132,6 +147,20 @@ aside {
 
 @include comment('layout 700');
 @include comment('typography 700');
+
+@include minw(700) {
+main {
+    article {
+        >header {
+            min-height: 15vh;
+            h1, p {
+                text-align: left;
+            }
+
+        }
+    }
+}
+}
 
 @include minw(900) {
     @include comment('layout 900');
