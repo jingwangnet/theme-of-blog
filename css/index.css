@@ -1,14 +1,14 @@
-a {
+a, aside section#aside-info ul a {
   text-decoration: none;
   color: #333;
   transition: all 1s;
 }
 
-a:hover {
+a:hover, aside section#aside-info ul a:hover {
   color: #1080fb;
 }
 
-a:active {
+a:active, aside section#aside-info ul a:active {
   color: #1080fb;
 }
 
@@ -103,8 +103,8 @@ main article div#sections-wrapper section h2 {
 
 .bg-logo::before {
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1rem;
+  right: 1rem;
   display: block;
   content: " ";
   z-index: -2;
@@ -116,8 +116,8 @@ main article div#sections-wrapper section h2 {
 
 .bg-logo::after {
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 0;
+  right: 0;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -181,7 +181,7 @@ body > header div#logo {
   justify-content: flex-start;
 }
 
-body > header div#logo h1 a {
+body > header div#logo h1 a, aside section#aside-info ul body > header div#logo h1 a {
   display: block;
 }
 
@@ -201,7 +201,7 @@ body > header div#nav-wrapper nav#nav-menu.active {
   display: block;
 }
 
-body > header div#nav-wrapper nav#nav-menu a {
+body > header div#nav-wrapper nav#nav-menu a, aside section#aside-info ul body > header div#nav-wrapper nav#nav-menu a {
   display: block;
 }
 
@@ -227,7 +227,7 @@ body > header div#logo h1 {
   margin-bottom: 0;
 }
 
-body > header div#logo h1 a {
+body > header div#logo h1 a, aside section#aside-info ul body > header div#logo h1 a {
   background: #1080fb;
   padding: 1rem;
   line-height: 1;
@@ -282,7 +282,7 @@ body div#nav-wrapper form#nav-search input {
     align-items: center;
     justify-content: flex-start;
   }
-  body > header div#logo h1 a {
+  body > header div#logo h1 a, aside section#aside-info ul body > header div#logo h1 a {
     display: block;
   }
   body > header div#logo div#icon-menu {
@@ -316,7 +316,7 @@ body div#nav-wrapper form#nav-search input {
   body > header div#nav-wrapper nav#nav-menu ul li {
     padding: 0;
   }
-  body > header div#nav-wrapper nav#nav-menu ul li a {
+  body > header div#nav-wrapper nav#nav-menu ul li a, aside section#aside-info body > header div#nav-wrapper nav#nav-menu ul li a {
     padding: 1rem;
   }
   body > header div#nav-wrapper form#nav-search input {
@@ -350,7 +350,7 @@ body div#nav-wrapper form#nav-search input {
     align-items: center;
     justify-content: flex-start;
   }
-  body > header div#nav-wrapper nav#nav-menu ul li a {
+  body > header div#nav-wrapper nav#nav-menu ul li a, aside section#aside-info body > header div#nav-wrapper nav#nav-menu ul li a {
     padding: 1rem;
   }
   body > header div#nav-wrapper form#nav-search {
@@ -392,7 +392,7 @@ main article > header {
   min-height: 20vh;
   min-height: 300px;
   margin: 1rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
   align-content: center;
 }
 
@@ -407,7 +407,7 @@ main article > header h1 {
 }
 
 aside figure img {
-  max-width: 100px;
+  max-width: 80px;
 }
 
 /*    typography 
@@ -434,6 +434,10 @@ aside section {
 
 aside section#aside-info {
   padding: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 aside section#aside-info figure {
@@ -499,6 +503,6 @@ aside section#aside-info ul {
   aside section#aside-info {
     display: block;
     padding: 2rem 1rem;
-    min-width: 280px;
+    min-width: 260px;
   }
 }
