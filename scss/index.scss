@@ -5,8 +5,11 @@
 main {
     article {
         >header {
-            min-height: 20vh;
             @include displayFlex();
+            min-height: 20vh;
+            margin: 0 1rem;
+            background-color: rgba(black, .1);
+            
             align-content: center;
             h1, p {
                 width: 100%;
@@ -148,19 +151,6 @@ aside {
 @include comment('layout 700');
 @include comment('typography 700');
 
-@include minw(700) {
-main {
-    article {
-        >header {
-            min-height: 15vh;
-            h1, p {
-                text-align: left;
-            }
-
-        }
-    }
-}
-}
 
 @include minw(900) {
     @include comment('layout 900');
