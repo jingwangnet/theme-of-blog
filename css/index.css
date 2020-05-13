@@ -250,7 +250,7 @@ body div#nav-wrapper nav#nav-menu ul li {
 }
 
 body div#nav-wrapper form#nav-search {
-  padding: 1rem;
+  padding-right: 1rem;
 }
 
 body div#nav-wrapper form#nav-search input {
@@ -318,7 +318,7 @@ body div#nav-wrapper form#nav-search input {
     padding: 1rem;
   }
   body > header div#nav-wrapper form#nav-search {
-    max-width: 300px;
+    max-width: 220px;
   }
 }
 
@@ -367,6 +367,9 @@ body div#nav-wrapper form#nav-search input {
     --------------------------------------------------*/
   body {
     padding: 0 calc(50% - 480px);
+  }
+  body > header div#nav-wrapper form#nav-search {
+    max-width: 280px;
   }
 }
 
