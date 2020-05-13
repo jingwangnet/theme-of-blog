@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"sass.format.debug": true,
+		"sass.lint.enable": true,
+		"easysass.targetDir": "./css/"
+	},
+	"easysass.formats": [
+		{
+			"format": "expanded",
+			"extension": ".css"
+		},
+		{
+			"format": "compressed",
+			"extension": ".min.css"
+		}
+	]
+}

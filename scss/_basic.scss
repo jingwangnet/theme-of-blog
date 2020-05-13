@@ -14,7 +14,6 @@
 html {
     font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
     color: #333;
-    text-rendering: optimizelegibility;
 }
 
 html,
@@ -35,25 +34,24 @@ body {
             h1 {
                 a {
                     display: block;
+                    text-decoration: none;
                 }
             }
 
             div#icon-menu {
                 flex: auto;
                 @include displayFlex($justify:flex-end, $wrap: nowrap);
-
             }
 
         }
 
         div#nav-wrapper {
             nav#nav-menu {
-                display: none;
 
-                &.active {
-                    display: block;
+                ul {
+                    @include displayFlex($justify: flex-start);
+
                 }
-
                 a {
                     display: block;
                 }
@@ -212,9 +210,7 @@ body {
                     }
                 }
                 form#nav-search {
-                    input {
-                        max-width: 250px;
-                    }
+                    max-width: 300px;
                 }
             }
         }

@@ -1,5 +1,5 @@
 a, aside section#aside-info ul a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #333;
   transition: all 1s;
 }
@@ -30,8 +30,7 @@ input {
 input[type=search] {
   text-transform: uppercase;
   outline: none;
-  border: none;
-  border-bottom: 2px solid black;
+  border: 2px solid black;
   transition: all .5s;
   font-size: 1.5rem;
 }
@@ -157,7 +156,6 @@ main article div#sections-wrapper section h2 {
 html {
   font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
   color: #333;
-  text-rendering: optimizelegibility;
 }
 
 html,
@@ -183,6 +181,7 @@ body > header div#logo {
 
 body > header div#logo h1 a, aside section#aside-info ul body > header div#logo h1 a {
   display: block;
+  text-decoration: none;
 }
 
 body > header div#logo div#icon-menu {
@@ -193,12 +192,11 @@ body > header div#logo div#icon-menu {
   justify-content: flex-end;
 }
 
-body > header div#nav-wrapper nav#nav-menu {
-  display: none;
-}
-
-body > header div#nav-wrapper nav#nav-menu.active {
-  display: block;
+body > header div#nav-wrapper nav#nav-menu ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 body > header div#nav-wrapper nav#nav-menu a, aside section#aside-info ul body > header div#nav-wrapper nav#nav-menu a {
@@ -319,8 +317,8 @@ body div#nav-wrapper form#nav-search input {
   body > header div#nav-wrapper nav#nav-menu ul li a, aside section#aside-info body > header div#nav-wrapper nav#nav-menu ul li a {
     padding: 1rem;
   }
-  body > header div#nav-wrapper form#nav-search input {
-    max-width: 250px;
+  body > header div#nav-wrapper form#nav-search {
+    max-width: 300px;
   }
 }
 

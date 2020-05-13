@@ -3,7 +3,7 @@
 
 //inline
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #333;
     transition: all 1s;
     &:hover {
@@ -34,8 +34,7 @@ input {
 input[type=search] {
     text-transform: uppercase;	
     outline:none;
-    border: none;
-    border-bottom: 2px solid $second-color;
+    border: 2px solid $second-color;
     transition: all .5s;
 
     @include fontSize(1);

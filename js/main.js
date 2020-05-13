@@ -4,7 +4,6 @@ window.addEventListener('load', initAll);
 
 function initAll() {
     btnSwith('#nav-search-btn', '#nav-search')
-    btnSwith('#nav-list-btn', '#nav-menu')
 }
 
 function btnSwith(btn, obj) {
