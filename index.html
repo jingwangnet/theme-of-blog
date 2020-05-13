@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header role="banner">
         <div id="logo">
             <h1><a href="/">静网未来</a></h1>
 
@@ -22,7 +22,7 @@
 
         <div id="nav-wrapper">
 
-            <nav id="nav-menu">
+            <nav id="nav-menu" role="navigation">
                 <ul>
                     <li><a href="/" class="list-link">home</a></li>
                     <li><a href="/blog/" class="list-link">blog</a></li>
@@ -30,15 +30,15 @@
                 </ul>
             </nav>
 
-            <form action="/search/" method="post" id="nav-search">
-                <input type="search" name="search" results="4" id="search" placeholder="search!">
+            <form action="/search/" method="post" id="nav-search" role="form">
+                <input type="search" name="search" results="4" id="search" placeholder="search!" role="search">
             </form>
 
         </div>
     </header>
 
     <div class="content-container">
-        <main>
+        <main role="main">
             <article>
                 <header>
                     <h1>记录 简单 生活</h1>
@@ -70,7 +70,7 @@
             </article>
     
         </main>
-        <aside>
+        <aside role="complementary">
             <section id="aside-info" class="box-shadow ">
                 <figure>
                     <img src="img/avatar/i.png" alt="avatar">
@@ -107,36 +107,12 @@
     
     </div>
 
-    <footer>
+    <footer role="contentinfo">
         <p>
            &copy; JINGWANGnet 2013-2019
         </p>
     </footer>
-    <script>
-        // window.onload = initAll;
-        window.addEventListener('load', initAll);
-        
-
-        function initAll() {
-            btnSwith('#nav-search-btn', '#nav-search')
-            btnSwith('#nav-list-btn', '#nav-menu')
-        }
-
-        function btnSwith(btn, obj) {
-            let button = document.querySelector(btn);
-            let toDisplayElement = document.querySelector(obj);
-
-            if (toDisplayElement && button) {
-                button.addEventListener('click', () => {
-                    button.classList.toggle("active");
-                    toDisplayElement.classList.toggle("active");
-                });
-            } else {
-                console.log(`${obj} is toDisplayElement: ${toDisplayElement}`);
-            }
-        }
-
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 
