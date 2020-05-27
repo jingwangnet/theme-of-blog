@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a, aside section#aside-info ul a {
   text-decoration: underline;
   color: #333;
@@ -161,6 +162,7 @@ html {
 html,
 body {
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 /*    Layout 
@@ -217,10 +219,6 @@ body .content-container {
 
 /*    Typography 
     --------------------------------------------------*/
-body > div.content-container {
-  margin-bottom: 1rem;
-}
-
 body > header div#logo h1 {
   margin-bottom: 0;
 }
@@ -250,7 +248,7 @@ body div#nav-wrapper nav#nav-menu ul li {
 }
 
 body div#nav-wrapper form#nav-search {
-  padding-right: 1rem;
+  padding: 0 1rem;
 }
 
 body div#nav-wrapper form#nav-search input {
@@ -318,7 +316,7 @@ body div#nav-wrapper form#nav-search input {
     padding: 1rem;
   }
   body > header div#nav-wrapper form#nav-search {
-    max-width: 220px;
+    width: 30vw;
   }
 }
 
@@ -365,21 +363,25 @@ body div#nav-wrapper form#nav-search input {
   }
   /*    Typography 900 
     --------------------------------------------------*/
-  body {
+  body > header, body > .content-container, body > footer {
     padding: 0 calc(50% - 480px);
   }
   body > header div#nav-wrapper form#nav-search {
-    max-width: 280px;
+    min-width: 280px;
   }
 }
 
 @media (min-width: 75em) {
-  /*    Layout 900 
+  /*    Layout 1200 
     --------------------------------------------------*/
-  /*    Typography 900 
+  /*    Typography 1200 
     --------------------------------------------------*/
-  body {
-    padding: 0 calc(50% - 600px);
+  body > header, body > .content-container, body > footer {
+    padding: 0 calc(50% - 580px);
+  }
+  body > header div#nav-wrapper form#nav-search {
+    width: 30vｗ;
+    max-width: 280px;
   }
 }
 
@@ -504,6 +506,5 @@ aside section#aside-info ul {
   aside section#aside-info {
     display: block;
     padding: 2rem 1rem;
-    min-width: 260px;
   }
 }
