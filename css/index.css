@@ -1,4 +1,3 @@
-@charset "UTF-8";
 a, aside section#aside-info ul a {
   text-decoration: underline;
   color: #333;
@@ -367,7 +366,7 @@ body div#nav-wrapper form#nav-search input {
     padding: 0 calc(50% - 480px);
   }
   body > header div#nav-wrapper form#nav-search {
-    min-width: 280px;
+    max-width: 280px;
   }
 }
 
@@ -378,10 +377,6 @@ body div#nav-wrapper form#nav-search input {
     --------------------------------------------------*/
   body > header, body > .content-container, body > footer {
     padding: 0 calc(50% - 580px);
-  }
-  body > header div#nav-wrapper form#nav-search {
-    width: 30vｗ;
-    max-width: 280px;
   }
 }
 

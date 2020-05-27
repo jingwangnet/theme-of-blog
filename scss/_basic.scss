@@ -270,7 +270,7 @@ body {
         >header {
             div#nav-wrapper {
                 form#nav-search {
-                    min-width: 280px;
+                    max-width: 280px;
                 }
             }
         }
@@ -289,14 +289,13 @@ body {
             padding: 0 calc(50% - 580px);
         }
 
-        >header {
-            div#nav-wrapper {
-                form#nav-search {
-                    width: 30vｗ;
-                    max-width: 280px
-                }
-            }
-        }
+        // >header {
+        //     div#nav-wrapper {
+        //         form#nav-search {
+        //             width: 30vｗ;
+        //         }
+        //     }
+        // }
 
     }
 
