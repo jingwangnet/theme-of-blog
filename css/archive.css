@@ -90,10 +90,6 @@ i.fas, i.fab {
   text-align: center;
 }
 
-main > article div#sections-wrapper section h2 {
-  border-bottom: 2px solid black;
-}
-
 .box-shadow {
   box-shadow: 0 0 3px 3px black;
 }
@@ -426,14 +422,6 @@ aside figure img {
     --------------------------------------------------*/
 main > article > header h1 {
   line-height: 1.1;
-}
-
-main > article div#sections-wrapper section {
-  margin: 1rem;
-}
-
-main > article div#sections-wrapper section ul li a, aside main > article div#sections-wrapper section#aside-info ul li a {
-  padding: 1rem;
 }
 
 aside section {

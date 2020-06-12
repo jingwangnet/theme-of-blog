@@ -55,27 +55,7 @@ main {
             }
 
         }
-
-        div#sections-wrapper {
-            section {
-                margin: 1rem;
-
-                h2 {
-                    @extend %border-bottom;
-                }
-
-                ul {
-                    li {
-                        a {
-                            padding: 1rem;
-                        }
-                    }
-                }
-            }
-
-        }
     }
-
 }
 
 aside {
@@ -133,7 +113,6 @@ aside {
     aside {
         section#aside-info {
             padding: 2rem;
-
         }
     }
 
@@ -175,7 +154,6 @@ aside {
             section#aside-info {
                 display: block;
                 min-width: 220px;
-
             }
         }
 
@@ -187,9 +165,6 @@ aside {
         section#aside-info {
             display: block;
             padding: 2rem 1rem;
-
-            // min-width: 260x;
-
         }
     }
 }

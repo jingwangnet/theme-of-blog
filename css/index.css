@@ -419,10 +419,6 @@ main > article > header h1, main > article > header p {
   text-align: center;
 }
 
-main > article div#sections-wrapper section {
-  margin: 1rem;
-}
-
 main > article div#sections-wrapper section ul li a, aside main > article div#sections-wrapper section#aside-info ul li a {
   padding: 1rem;
 }
