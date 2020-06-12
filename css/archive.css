@@ -388,21 +388,34 @@ main > article > header {
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  min-height: 20vh;
-  min-height: 300px;
   margin: 1rem;
   background-color: rgba(0, 0, 0, 0.05);
-  align-content: center;
-}
-
-main > article > header h1, main > article > header p {
-  width: 100%;
-  padding: 0;
-  margin: 0 1rem;
 }
 
 main > article > header h1 {
-  margin-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 0rem;
+}
+
+main > article > article {
+  padding: 1rem;
+  background: lightblue;
+  margin: 1rem;
+}
+
+main > article > article h2 {
+  padding: 0rem 1rem;
+  margin-bottom: 0rem;
+}
+
+main > article > article p {
+  margin-bottom: 0rem;
+  font-size: 1.5rem;
+}
+
+main > article > article p.info {
+  font-size: 1rem;
+  padding: 0rem 1rem;
 }
 
 aside figure img {
@@ -413,10 +426,6 @@ aside figure img {
     --------------------------------------------------*/
 main > article > header h1 {
   line-height: 1.1;
-}
-
-main > article > header h1, main > article > header p {
-  text-align: center;
 }
 
 main > article div#sections-wrapper section {
@@ -476,6 +485,16 @@ aside section#aside-info ul {
 
 /*    layout 700 
     --------------------------------------------------*/
+@media (min-width: 43.75em) {
+  main > article > header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+  }
+}
+
 /*    typography 700 
     --------------------------------------------------*/
 @media (min-width: 56.25em) {
