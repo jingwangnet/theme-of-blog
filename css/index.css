@@ -161,7 +161,21 @@ html {
 html,
 body {
   min-height: 100vh;
-  min-width: 100vw;
+}
+
+body > header {
+  background-color: red;
+  background-clip: content-box;
+}
+
+body .content-container {
+  background-color: orange;
+  background-clip: content-box;
+}
+
+body > footer {
+  background-color: lightblue;
+  background-clip: content-box;
 }
 
 /*    Layout 
@@ -362,9 +376,6 @@ body div#nav-wrapper form#nav-search input {
   }
   /*    Typography 900 
     --------------------------------------------------*/
-  body > header, body > .content-container, body > footer {
-    padding: 0 calc(50% - 480px);
-  }
   body > header div#nav-wrapper form#nav-search {
     max-width: 280px;
   }
@@ -375,9 +386,6 @@ body div#nav-wrapper form#nav-search input {
     --------------------------------------------------*/
   /*    Typography 1200 
     --------------------------------------------------*/
-  body > header, body > .content-container, body > footer {
-    padding: 0 calc(50% - 580px);
-  }
 }
 
 /*    Layout 
