@@ -360,7 +360,7 @@ body div#nav-wrapper form#nav-search input {
   /*    Typography 900 
     --------------------------------------------------*/
   body > header, body > .content-container, body > footer {
-    padding: 0 calc(50% - 440px);
+    padding: 0 calc(50vw - 440px);
   }
   body > header div#nav-wrapper form#nav-search {
     max-width: 280px;
@@ -373,7 +373,7 @@ body div#nav-wrapper form#nav-search input {
   /*    Typography 1200 
     --------------------------------------------------*/
   body > header, body > .content-container, body > footer {
-    padding: 0 calc(50% - 580px);
+    padding: 0 calc(50vw - 580px);
   }
 }
 
