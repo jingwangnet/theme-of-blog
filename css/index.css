@@ -163,21 +163,6 @@ body {
   min-height: 100vh;
 }
 
-body > header {
-  background-color: red;
-  background-clip: content-box;
-}
-
-body .content-container {
-  background-color: orange;
-  background-clip: content-box;
-}
-
-body > footer {
-  background-color: lightblue;
-  background-clip: content-box;
-}
-
 /*    Layout 
     --------------------------------------------------*/
 body {
