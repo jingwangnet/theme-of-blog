@@ -179,6 +179,11 @@ body > header div#logo {
   justify-content: flex-start;
 }
 
+body > header div#logo h1 {
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+}
+
 body > header div#logo h1 a, aside section#aside-info ul body > header div#logo h1 a {
   display: block;
   text-decoration: none;

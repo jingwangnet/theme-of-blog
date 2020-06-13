@@ -34,6 +34,8 @@ body {
             @include displayFlex($justify: flex-start);
 
             h1 {
+                font-size: 1.5rem;
+                letter-spacing: .2rem;
                 a {
                     display: block;
                     text-decoration: none;

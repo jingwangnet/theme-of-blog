@@ -3,27 +3,15 @@
 
 main {
     > article {
+        background-color: rgba(black, .05);
+        margin: 1rem;
+        padding: 1rem;
         >header {
-            @include displayFlex();
-            margin: 1rem;
-            background-color: rgba(black, .05);
             h1 {
-                width: 100%;
                 margin-bottom: 0rem;
+                margin: 0rem;
+                padding: 1rem;
             }
-        }
-
-        > article {
-            padding: 1rem 0;
-            background-color: rgba(black, .05);
-            margin: 1rem;
-
-            h2 {
-                padding: 0 1rem;
-                margin: 0;
-                line-height: 1.2;
-            }
-            
             p.info {
                 font-size: 1rem;
                 padding: 0rem 1rem;
@@ -34,13 +22,16 @@ main {
                 }
             }
 
-            p.content {
-                margin-bottom: 0rem;
-                font-size: 1.5rem;
-                line-height: 1.2;
-            }
-
         }
+
+        & >p:nth-of-type(1) {
+            margin-top: 1rem;
+        } 
+        p {
+            padding: 0 1rem;
+            font-size: 1.1rem;
+        }
+ 
     }
 }
 aside {
@@ -113,17 +104,17 @@ aside {
 }
 
 @include comment('layout 700');
-@include minw(700) {
-    main {
-        > article {
-            >header {
-                @include displayFlex();
-                min-height: 10vh;
-            }
-        }
-    }
+// @include minw(700) {
+//     main {
+//         > article {
+//             >header {
+//                 @include displayFlex();
+//                 min-height: 10vh;
+//             }
+//         }
+//     }
 
-}
+// }
 @include comment('typography 700');
 
 
@@ -138,7 +129,6 @@ aside {
             flex: auto;
             margin-right: 1rem;
 
-        margin: 1rem;
             > article {
                 flex: auto;
             }
