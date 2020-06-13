@@ -32,11 +32,9 @@ input[type=search] {
   outline: none;
   border: 2px solid black;
   transition: all .5s;
-  font-size: 1.5rem;
 }
 
 input[type=search]:focus {
-  font-size: 1.5rem;
   background: black;
   color: white;
 }
@@ -394,24 +392,31 @@ main > article > header h1 {
 }
 
 main > article > article {
-  padding: 1rem;
+  padding: 1rem 0;
   background: lightblue;
   margin: 1rem;
 }
 
 main > article > article h2 {
-  padding: 0rem 1rem;
-  margin-bottom: 0rem;
-}
-
-main > article > article p {
-  margin-bottom: 0rem;
-  font-size: 1.5rem;
+  padding: 0 1rem;
+  margin: 0;
+  line-height: 1.2;
 }
 
 main > article > article p.info {
   font-size: 1rem;
   padding: 0rem 1rem;
+  margin-bottom: 0rem;
+}
+
+main > article > article p.info span.name, main > article > article p.info time {
+  font-weight: bolder;
+}
+
+main > article > article p.content {
+  margin-bottom: 0rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 
 aside figure img {
